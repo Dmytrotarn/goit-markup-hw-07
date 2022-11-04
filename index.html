@@ -407,7 +407,7 @@
       </section>
     </main>
 
-    <!--                    FOOTER-->
+    <!--                    FOOTER          -->
 
     <footer class="footer">
       <div class="container footer-container">
@@ -473,20 +473,27 @@
 
         <div class="subscribe">
           <span class="subscribe-title">Підпишіться на розсилку</span>
-          <div class="sub-field">
-            <input type="email" class="sub-input" />
-            <button type="submit" class="subscribe-btn">
-              Підписатися
-              <svg class="sub-logo" width="24" height="24">
-                <use href="./images/icons.svg#icon-send"></use>
-              </svg>
-            </button>
-          </div>
+          <form>
+            <div class="sub-field">
+              <input
+                type="email"
+                placeholder="Email"
+                name="sub-mail"
+                class="sub-input"
+              />
+              <button type="submit" class="subscribe-btn">
+                Підписатися
+                <svg class="sub-logo" width="24" height="24">
+                  <use href="./images/icons.svg#icon-send"></use>
+                </svg>
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </footer>
 
-    <!--                           MODAL-->
+    <!--                      MODAL        -->
 
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
@@ -514,7 +521,7 @@
           <div class="modal-field">
             <label for="modal-mail" class="modal-label">Пошта</label>
             <input
-              type="text"
+              type="email"
               name="modal-mail"
               id="modal-mail"
               class="modal-input"
