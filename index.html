@@ -518,7 +518,7 @@
           </svg>
         </button>
         <p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
-        <form action="">
+        <form class="form">
           <div class="modal-field">
             <label for="name" class="modal-label">Ім'я</label
             ><input type="text" name="name" id="name" class="modal-input" />
@@ -546,12 +546,12 @@
             </svg>
           </div>
           <div class="modal-field form-comment">
-            <label for="user-comment" class="modal-label">Коментар</label>
+            <label for="modal-textarea" class="modal-label">Коментар</label>
             <textarea
               name="user-comment"
               id="user-comment"
               placeholder="Введіть текст"
-              class="modal-comment"
+              class="modal-textarea"
             ></textarea>
           </div>
           <div class="modal-field checkbox">
@@ -561,7 +561,7 @@
               id="privacy"
               class="visually-hidden input-check"
             />
-            <label for="privacy" class="modal-checkbox-label"
+            <label for="privacy" class="modal-check-text"
               ><span class="check">
                 <svg class="icon-check" width="18px" height="18px">
                   <use href="./images/icons.svg#icon-check"></use>
@@ -570,7 +570,7 @@
             </label>
             <a href="" class="check-link">Умови договору</a>
           </div>
-          <button type="submit" class="modal-submit-btn">Відправити</button>
+          <button type="submit" class="modal-btn button">Відправити</button>
         </form>
       </div>
     </div>

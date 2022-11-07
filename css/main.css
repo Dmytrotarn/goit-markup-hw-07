@@ -175,7 +175,7 @@ address {
   transform: translate(-50%, -50%) scaleY(0);
 }
 
-.modal-btn {
+.btn-close {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -193,7 +193,7 @@ address {
   right: 8px;
   transition: fill 250ms var(--main-animation), border 250ms var(--main-animation);
 }
-.modal-btn:hover, .modal-btn:focus {
+.btn-close:hover, .btn-close:focus {
   fill: var(--accent);
   border: 1px solid var(--accent);
 }
@@ -204,11 +204,7 @@ address {
   pointer-events: none;
 }
 
-/* MODAL FORM */
-.form {
-  width: 448px;
-}
-
+/* MODAL */
 .modal-title {
   font-weight: 700;
   font-size: 20px;
@@ -218,21 +214,21 @@ address {
   margin-bottom: 12px;
 }
 
-.form-field {
+.modal-field {
   position: relative;
   margin-bottom: 10px;
 }
-.form-field:last-child {
+.modal-field:last-child {
   margin-bottom: 0;
 }
 
-.form-field.checkbox {
+.modal-field.checkbox {
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
 }
 
-.form-input {
+.modal-input {
   width: 100%;
   height: 40px;
   padding: 11px;
@@ -243,14 +239,18 @@ address {
   padding-left: 42px;
   transition: border 250ms var(--main-animation);
 }
-.form-input:focus {
+.modal-input:focus {
   border: 1px solid var(--accent);
 }
-.form-input:focus + .modal-icon {
+.modal-input:focus, .modal-input:hover + .modal-input-icon {
   fill: var(--accent);
 }
 
-.form-lable {
+.modal-input:hover {
+  fill: var(--accent-color);
+}
+
+.modal-label {
   display: block;
   margin-bottom: 4px;
   font-size: 12px;
@@ -259,11 +259,11 @@ address {
   color: var(--primary-text-color);
 }
 
-.form-comment {
+.modal-comment {
   margin-bottom: 20px;
 }
 
-.form-textarea {
+.modal-textarea {
   display: block;
   width: 100%;
   height: 120px;
@@ -273,31 +273,29 @@ address {
   resize: none;
   outline: transparent;
 }
-.form-textarea::-moz-placeholder {
+.modal-textarea::-moz-placeholder {
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-.form-textarea:-ms-input-placeholder {
+.modal-textarea:-ms-input-placeholder {
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-.form-textarea::placeholder {
+.modal-textarea::placeholder {
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-.form-textarea:focus {
+.modal-textarea:focus {
   border: 1px solid var(--accent);
 }
 
-.modal-icon {
-  display: inline-block;
-  align-items: center;
+.modal-input-icon {
   position: absolute;
   width: 18px;
   height: 18px;
@@ -307,7 +305,7 @@ address {
   transition: fill 250ms var(--main-animation);
 }
 
-.check-text {
+.modal-check-text {
   display: flex;
   align-items: center;
   font-size: 14px;
@@ -315,7 +313,7 @@ address {
   color: var(--primary-text-color);
 }
 
-.check-text .check-meta {
+.modal-check-text .check {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -328,37 +326,29 @@ address {
   transition: background-color 250ms var(--main-animation), fill 250ms var(--main-animation), border-color 250ms var(--main-animation);
 }
 
-.form-check:checked + .check-text .check-meta {
+.input-check:checked + .modal-check-text .check {
   background-color: var(--accent);
   border-color: transparent;
   fill: var(--white-color);
 }
 
-.form-check:focus + .check-text .check-meta {
+.input-check:focus,
+.input-check:hover + .modal-check-text .check {
   border-color: var(--accent);
 }
 
-.check-desc {
-  position: relative;
+.check-link {
   color: var(--accent);
   margin-left: 10px;
 }
-.check-desc::after {
-  position: absolute;
-  content: "";
-  width: 100%;
-  border-bottom: 1px solid var(--accent);
-  top: 18px;
-  left: 0;
-}
 
-.form-btn {
+.modal-btn {
   margin: 0 auto;
   padding: 10px 52px 10px 52px;
   transition: color 250ms var(--main-animation);
 }
-.form-btn:hover, .form-btn:focus {
-  color: var(--main-color);
+.modal-btn:hover, .modal-btn:focus {
+  background-color: var(--btn-accent);
 }
 
 .header {
