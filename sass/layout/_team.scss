@@ -1,0 +1,67 @@
+.team {
+  background-color: var(--secondary-bg-color);
+}
+
+.team-list {
+  display: flex;
+  gap: 30px;
+}
+
+.team-item {
+  width: calc((100% - 3 * 30px) / 4);
+
+  background-color: var(--white-color);
+  box-shadow: var(--shadow-team);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-card {
+  padding: 30px 0;
+}
+
+.team-name {
+  margin-bottom: 10px;
+  color: var(--main-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+  text-align: center;
+}
+
+.team-text {
+  font-size: 16px;
+  line-height: 1.18;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+/* team-socials*/
+
+.team-socials-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: var(--color-icon);
+
+  transition: color 250ms var(--main-animation),
+    background-color 250ms var(--main-animation);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent);
+    color: var(--white-color);
+  }
+}
+
+.socials-logo {
+  fill: currentColor;
+}

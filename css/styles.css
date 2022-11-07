@@ -84,7 +84,7 @@ body {
   color: var(--main-color);
 }
 
-.logo-accent {
+.navigation-text {
   font-family: "Raleway", sans-serif;
   font-size: 26px;
   line-height: 1.19;
@@ -465,7 +465,7 @@ body {
   text-align: center;
 }
 
-.profession-text {
+.team-text {
   margin-top: 10px;
   margin-bottom: 16px;
   font-size: 16px;
